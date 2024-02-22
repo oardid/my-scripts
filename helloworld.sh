@@ -8,13 +8,13 @@
 # Declaration of variables
 
 perfect="I am working perfectly!"
-
+hello="Hello World"
 # Declaration of functions
 
 
 # Main
 
-echo "Hello World"
+echo $hello
 echo $perfect
 
 # End
