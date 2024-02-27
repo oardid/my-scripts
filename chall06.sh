@@ -3,7 +3,7 @@
 # Author:                       Omar Ardid
 # Date of latest revision:      02/26/2024
 # Purpose:                      Create a script that detects if a directory exists, then creates it if it does not exist
-# Resources: 
+# Resources:                    
 
 dir_list=()
 
