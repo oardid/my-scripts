@@ -22,12 +22,13 @@ sys_info(){
     fi
     read -p "Do you want to display 'Display adapter'? (y/n) : " answer
     if [[ $answer == "y" ]]; then
-    echo "Display adapter: "$(lshw -class display | grep -E 'description:|product:|vendor:|physical id:|bus info:|width:|clock:|capabilities:|configuration:|resources:')
+    echo "Display adapter: "$(lshw -class display | grep -A 10 "display")
     fi
     read -p "Do you want to display Network adapter? (y/n) : " answer
     if [[ $answer == "y" ]]; then
-    echo "Network adapter: "$(lshw -class network | grep -E 'description:|product:|vendor:|physical id:|bus info:|logical name:|version:|serial:|size:|capacity:|width:|clock:|capabilities:|configuration:|resources:')
-    done
+    echo "Network adapter: "$(lshw -class network | grep -A 15 "network")
+    fi
+    
 }
 sys_info
 
