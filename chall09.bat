@@ -7,7 +7,6 @@ $Errors = Get-EventLog -LogName System -EntryType Error
 $EventID16 = Get-EventLog -LogName System -InstanceId 16
 $Newest20 = Get-EventLog -LogName System -Newest 20
 $Events500 = Get-EventLog -LogName System -Newest 500
-$Events500 | Group-Object -Property Source -NoElement | Sort-Object -Property Count -Descending | Format-Table -Wrap | Out-String -Width ([int]::MaxValue)
 
 set /p name=Enter your name:
 echo Hello, %name%! Welcome!
