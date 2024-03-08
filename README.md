@@ -14,7 +14,7 @@
 
 #### Scripts
 <details> 
-<summary><a href="./201">201 Scripts</a></summary>
+<summary>201 Scripts</summary>
 
 - [Challenge 02](201/helloworld.sh)
 - [Challenge 03](201/FunctionsChallenge.sh)
