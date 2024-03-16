@@ -47,7 +47,7 @@
 - [Challenge 13]()
 </details>
 
-</details>
+<details>
 <summary><a href="./401">401 Scripts</a></summary>
 
 - [Challenge 01]()
