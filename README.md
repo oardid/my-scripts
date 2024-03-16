@@ -30,8 +30,37 @@
 </details>
 
 <details>
-<summary> 301 Scripts</summary>
-- ### [](301)
+<summary><a href="./301">301 Scripts</a></summary>
 
-- ### [401 Scripts](401)
+- [Challenge 01]()
+- [Challenge 02]()
+- [Challenge 03]()
+- [Challenge 04]()
+- [Challenge 05]()
+- [Challenge 06]()
+- [Challenge 07]()
+- [Challenge 08]()
+- [Challenge 09]()
+- [Challenge 10]()
+- [Challenge 11]()
+- [Challenge 12]()
+- [Challenge 13]()
+</details>
 
+</details>
+<summary><a href="./401">401 Scripts</a></summary>
+
+- [Challenge 01]()
+- [Challenge 02]()
+- [Challenge 03]()
+- [Challenge 04]()
+- [Challenge 05]()
+- [Challenge 06]()
+- [Challenge 07]()
+- [Challenge 08]()
+- [Challenge 09]()
+- [Challenge 10]()
+- [Challenge 11]()
+- [Challenge 12]()
+- [Challenge 13]()
+</details>
