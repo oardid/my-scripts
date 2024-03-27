@@ -20,6 +20,6 @@ directpath() {
     # See changes
     echo "New directory: $(pwd)"
     echo "Directory contents after permission change:"
-    ls -al
+    ls -als
 }
 directpath
