@@ -2,7 +2,7 @@
 
 # Script Name:                  ops301-challenge02
 # Author:                       Omar Ardid
-# Date of latest revision:      03/27/2024
+# Date of latest revision:      03/26/2024
 # Purpose:                      Appends the current date and time to the filename
 
 # Declaration of variables
