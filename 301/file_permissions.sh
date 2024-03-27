@@ -3,6 +3,23 @@
 # Script Name:                  ops301-challenge03
 # Author:                       Omar Ardid
 # Date of latest revision:      03/27/2024
-# Purpose:                      
+# Purpose:                      Changing permissions in system files/directories
 
 # Declaration of variables
+curre=$(pwd)
+
+directpath() {
+    echo "Current directory: $curre"
+    echo "Please enter full directory path to change permission:" 
+    read -r input_dir
+    read -p "Enter permissions number (e.g. 777 to perform a chmod 777): " perm
+    # Change permissions
+    chmod "$perm" "$input_dir" 
+    # Navigate to the directory
+    cd "$input_dir" 
+    # See changes
+    echo "New directory: $(pwd)"
+    echo "Directory contents after permission change:"
+    ls -al
+}
+directpath
