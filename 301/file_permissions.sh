@@ -9,10 +9,13 @@
 curre=$(pwd)
 
 directpath() {
+    # Shows the user current directory path
     echo "Current directory: $curre"
+    # Asking the user to input the directory path to change permission
     echo "Please enter full directory path to change permission:" 
     read -r input_dir
-    read -p "Enter permissions number (e.g. 777 to perform a chmod 777): " perm
+    # Asking the user to input the number 777 to change permission
+    read -p "Enter permissions number '777' to perform a chmod 777: " perm
     # Change permissions
     chmod "$perm" "$input_dir" 
     # Navigate to the directory
