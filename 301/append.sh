@@ -1,19 +1,13 @@
 #!/bin/bash
 
-day=$(date +%d)
-month=$(date +%m)
-year=$(date +%Y)
-hour=$(date +%H)
-minute=$(date +%M)
-second=$(date +%S)
+# Script Name:                  ops301-challenge02
+# Author:                       Omar Ardid
+# Date of latest revision:      03/27/2024
+# Purpose:                      Appends the current date and time to the filename
 
+# Declaration of variables
 
-cp /var/log/syslog .
-echo "Orginal  syslog file before append:"
-cat syslog 
+today=$(date +%m-%d-%Y~%H:%M:%S)
 
-
-echo "Today date: $month-$day-$year" >> syslog
-echo "Today time: $hour:$minute:$second" >> syslog
-echo "Appended file:"
-cat syslog
+# Copying system logs and adding today date on the file name
+cp /var/log/syslog ./syslog.$today
