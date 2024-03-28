@@ -12,7 +12,7 @@ directpath() {
     # Shows the user current directory path
     echo "Current directory: $curre"
     # Asking the user to input the directory path to change permission
-    echo "Please enter full directory path to change permission:" 
+    echo "Please enter full directory path you wish to change the permission of:" 
     read -r input_dir
     # Asking the user to input the number 777 to change permission
     read -p "Enter permissions number '777' to perform a chmod 777: " perm
