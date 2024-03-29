@@ -11,9 +11,9 @@
 sysmenu(){
     while true; do 
         clear
-        echo "System Menu"
-        echo "1. Print 'Hello world' to the screen."
-        echo "2. Ping yourself (pings this computer's loopback address)."
+        echo "~~~ System Menu ~~~"
+        echo "1. Print 'Hello World' to the screen."
+        echo "2. Ping self (pings this computer's loopback address)."
         echo "3. Ip Info."
         echo "4. Exit."
         read -p "Enter your choice: " choice
@@ -28,10 +28,11 @@ sysmenu(){
             ifconfig -a
             read -p "Press enter to return to the main menu."
         elif [[ $choice == 4 ]]; then
+            echo Goodbye!!!
             exit 0
         else 
             echo "Invalid choice. Please enter a number from 1 to 4."
-            read -p "Press enter to return to the main menu."
+            read -p "Press enter to continue."
         fi
     done
 }
