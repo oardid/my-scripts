@@ -4,7 +4,7 @@
 # Author:                       Omar Ardid
 # Date of latest revision:      03/29/2024
 # Purpose:                      Create a bash script that clears log files for you
-# Source:                       
+# Source:                       https://github.com/codefellows/seattle-ops-301d12/blob/main/class-05/challenges/DEMO.md
 
 # Variables
 BACKUP_DIR="backups"
