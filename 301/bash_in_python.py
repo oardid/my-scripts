@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/bin/python
 
 # Script Name:                  ops301-challenge06
 # Author:                       Omar Ardid
