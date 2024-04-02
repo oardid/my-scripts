@@ -1,4 +1,4 @@
-#!/bin/usr/phyton
+#!/bin/usr/phyton3
 
 
 
