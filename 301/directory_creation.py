@@ -10,14 +10,11 @@ import os
 
 # Declaration of variables
 
-### Read user input here into a variable
-path = input("Enter the full file path: ")
-
 # Declaration of functions
 
 ### Declare a function here
 def directs(file_path):
-    for (root, dirs, files) in os.walk(file_path):
+    for (root, dirs, files) in os.walk("/home/omar/" + file_path):
         ### Add a print command here to print ==root==
         print(root)
         ### Add a print command here to print ==dirs==
@@ -26,6 +23,9 @@ def directs(file_path):
         print(files)
 
 # Main
+
+### Read user input here into a variable
+path = input("Enter the full file path: ")
 
 ### Pass the variable into the function here
 directs(path)
