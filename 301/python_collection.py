@@ -17,7 +17,6 @@ print("Fourth item in the list: " + foods[3])
 print("Sixth item trough tenth item in the list: " + foods[5:10])
 
 # Changing the value of the seventh item to onion
-foods.remove("Salads")
-foods.insert(6, "Onion")
+foods[6] = "Onion"
 print(foods)
 print("Replaced 'Salads' to 'Onion' from food list: " + foods[6])
