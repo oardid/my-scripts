@@ -13,8 +13,8 @@ print("Food list: " + str(foods))
 # Printing the fourth item in the list
 print("Fourth item in the list: " + foods[3])
 
-# Print the sixth item in the list
-print("Sixth item in the list: " + foods[5])
+# Print the sixth trough tenth item in the list
+print("Sixth item trough tenth item in the list: " + foods[5:10])
 
 # Changing the value of the seventh item to onion
 foods.remove("Salads")
