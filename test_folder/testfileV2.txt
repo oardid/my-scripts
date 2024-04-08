@@ -1,0 +1,4 @@
+This is my new test file.This is the second line.
+This is the line that I appended to the file.
+This is the third line.
+This is the fourth line.
