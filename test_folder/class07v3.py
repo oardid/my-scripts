@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 
 # Import libraries
 import os
