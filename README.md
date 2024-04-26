@@ -4,7 +4,7 @@
 Welcome to my Ops Challenges repository! This collection showcases various shell scripts and solutions I’ve developed while tackling Ops Challenges. Whether it’s automating tasks, managing files, or optimizing processes, these scripts reflect my journey in honing my skills.
 
 ### ***Purpose***
-Why am I learning these skills? My goal is to gain a solid understanding of code execution and apply it to the dynamic field of cybersecurity. By mastering shell scripting, I can contribute effectively to securing systems and networks.
+Why am I learning these skills? My goal is to gain a solid understanding of code execution and apply it to the dynamic field of cybersecurity. By mastering these scripting languages, I can contribute effectively to securing systems and networks.
 
 ### ***Workplace Applications***
 Shell scripting isn’t limited to labs—it’s a valuable skill in the workplace too. Consider these applications:
