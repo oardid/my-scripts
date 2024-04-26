@@ -8,10 +8,10 @@ Why am I learning these skills? My goal is to gain a solid understanding of code
 
 ### ***Workplace Applications***
 Shell scripting isn’t limited to labs—it’s a valuable skill in the workplace too. Consider these applications:
+* Automation: Streamlining repetitive tasks.
+* Directory Management: Creating directories and organizing files.
+* Report Generation: Generating logs or summaries.
 
-Automation: Streamlining repetitive tasks.
-Directory Management: Creating directories and organizing files.
-Report Generation: Generating logs or summaries.
 ### ***Ongoing Improvements***
 Given more time and knowledge, I’d enhance all my scripts. Each iteration brings efficiency and readability. Simplicity is key—I aim to make my scripts concise and easy to understand.
 
