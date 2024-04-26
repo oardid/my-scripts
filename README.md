@@ -19,17 +19,17 @@ Given more time and knowledge, I’d enhance all my scripts. Each iteration brin
 <details> 
 <summary>201 Scripts</summary>
 
-2. ***[My First Bash Script](201/helloworld.sh)***
-3. ***[Functions](201/FunctionsChallenge.sh)***
-4. ***[Arrays](201/chall04.sh)***
-5. ***[Loops](201/chall05.sh)***
-6. ***[Conditionals](201/chall06.sh)***
-7. ***[System Information](201/chall07.sh)***
-8. ***[Windows Batch Scripting](201/chall08.bat)***
-9. ***[Log Retrieval via Powershell](201/chall09.bat)***
-10. ***[System Process Commands](201/chall10.bat)***
-11. ***[Automated Endpoint Configuration](201/chall11.md)***
-13. ***[Domain Analyzer](201/chall13.sh)***
+* ***[My First Bash Script](201/helloworld.sh)***
+* ***[Functions](201/FunctionsChallenge.sh)***
+* ***[Arrays](201/chall04.sh)***
+* ***[Loops](201/chall05.sh)***
+* ***[Conditionals](201/chall06.sh)***
+* ***[System Information](201/chall07.sh)***
+* ***[Windows Batch Scripting](201/chall08.bat)***
+* ***[Log Retrieval via Powershell](201/chall09.bat)***
+* ***[System Process Commands](201/chall10.bat)***
+* ***[Automated Endpoint Configuration](201/chall11.md)***
+* ***[Domain Analyzer](201/chall13.sh)***
 </details>
 
 <details>
