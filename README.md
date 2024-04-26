@@ -6,15 +6,6 @@ Welcome to my Ops Challenges repository! This collection showcases various shell
 ### ***Purpose***
 Why am I learning these skills? My goal is to gain a solid understanding of code execution and apply it to the dynamic field of cybersecurity. By mastering shell scripting, I can contribute effectively to securing systems and networks.
 
-### ***Key Concepts from Ops 201***
-In Ops 201, I delved into fundamental concepts, including:
-
-Variables: Creating and managing data storage.
-Functions: Structuring reusable code blocks.
-Loops: Iterating through tasks efficiently.
-### ***Favorite Ops Challenge Assignment***
-While it’s tough to pick just one, Challenge 13 stands out. Crafting the script was enjoyable, and I loved learning how to create a text file to store user input at the end. It’s these practical moments that make Ops Challenges rewarding!
-
 ### ***Workplace Applications***
 Shell scripting isn’t limited to labs—it’s a valuable skill in the workplace too. Consider these applications:
 
