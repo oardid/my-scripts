@@ -3,7 +3,7 @@
 # Script Name:                  ops401-challenge02
 # Author:                       Omar Ardid
 # Date of latest revision:      04/30/2024
-# Purpose:                      Uptime Sensor Tool
+# Purpose:                      Create an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
 
 import os 
 
@@ -19,11 +19,9 @@ timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
 # Assign success or failure to a status variable.
 if result == 0:
     status = "Success"
-    print(f"{timestamp} Lan is up and running! Destination IP: {ip_address}")
+    print(f"{timestamp} Destination IP: {ip_address} Lan is up and running! ")
 else:
     status = "Failure"
-    print(f"{timestamp} Lan is down!")
+    print(f"{timestamp} Destination IP: {ip_address} Lan is down!")
 
 print(f"Status: {status}")
-
-
