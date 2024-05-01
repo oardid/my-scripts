@@ -32,18 +32,18 @@
 <details>
 <summary>301 Scripts</summary>
 
-- ***[Challenge 02](ops-301/)***
-- ***[Challenge 03](ops-301/)***
-- ***[Challenge 04](ops-301/)***
-- ***[Challenge 05](ops-301/)***
-- ***[Challenge 06](ops-301/)***
-- ***[Challenge 07](ops-301/)***
-- ***[Challenge 08](ops-301/)***
-- ***[Challenge 09](ops-301/)***
-- ***[Challenge 10](ops-301/)***
-- ***[Challenge 11](ops-301/)***
-- ***[Challenge 12](ops-301/)***
-- ***[Challenge 13](ops-301/)***
+- ***[Append; Date and Time](ops-301/append.sh)***
+- ***[File Permissions](ops-301/file_permissions.sh)***
+- ***[Conditionals in Menu Systems](ops-301/conditionals.sh)***
+- ***[Clearing Logs](ops-301/clearing_logs.sh)***
+- ***[Bash in Python](ops-301/bash_in_python.py)***
+- ***[Directory Creation](ops-301/directory_creation.py)***
+- ***[Python Collections](ops-301/python_collection.py)***
+- ***[Python Conditional Statements](ops-301/python_conditional.py)***
+- ***[Python File Handling](ops-301/pyhton_file_handling.py)***
+- ***[Psutil](ops-301/challenge11.py)***
+- ***[Python Requests Library](ops-301/python_requests_library.py)***
+- ***[Powershell AD Automation](ops-301/Powershell_AD_Automation.ps1)***
 </details>
 
 <details>
