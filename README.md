@@ -8,7 +8,7 @@
 - How can these examples of shell scripting be applied to the workplace?
   * To automate simple tasks. For example, creating directories and making text files inside those directories.
 - What scripts would you continue to improve if you had the time?
-  * If I had more time and knowledge, I would like to at least try to improve all my scripts.
+  * If I had more time and knowledge, I would like to improve all my scripts.
 - What aspect of your shell scripting skillset do you hope to improve next?
   * Making my scripts more simple and easier to read.
 
