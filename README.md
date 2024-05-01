@@ -16,23 +16,23 @@
 <details> 
 <summary>201 Scripts</summary>
 
-2. ***[My First Bash Script](201/helloworld.sh)***
-3. ***[Functions](201/FunctionsChallenge.sh)***
-4. ***[Arrays](201/chall04.sh)***
-5. ***[Loops](201/chall05.sh)***
-6. ***[Conditionals](201/chall06.sh)***
-7. ***[System Information](201/chall07.sh)***
-8. ***[Windows Batch Scripting](201/chall08.bat)***
-9. ***[Log Retrieval via Powershell](201/chall09.bat)***
-10. ***[System Process Commands](201/chall10.bat)***
-11. ***[Automated Endpoint Configuration](201/chall11.md)***
-13. ***[Domain Analyzer](201/chall13.sh)***
+2. ***[My First Bash Script](ops-201/helloworld.sh)***
+3. ***[Functions](ops-201/FunctionsChallenge.sh)***
+4. ***[Arrays](ops-201/chall04.sh)***
+5. ***[Loops](ops-201/chall05.sh)***
+6. ***[Conditionals](ops-201/chall06.sh)***
+7. ***[System Information](ops-201/chall07.sh)***
+8. ***[Windows Batch Scripting](ops-201/chall08.bat)***
+9. ***[Log Retrieval via Powershell](ops-201/chall09.bat)***
+10. ***[System Process Commands](ops-201/chall10.bat)***
+11. ***[Automated Endpoint Configuration](ops-201/chall11.md)***
+13. ***[Domain Analyzer](ops-201/chall13.sh)***
 </details>
 
 <details>
 <summary>301 Scripts</summary>
 
-- ***[Challenge 02]()***
+- ***[Challenge 02](ops-301/)***
 - ***[Challenge 03]()***
 - ***[Challenge 04]()***
 - ***[Challenge 05]()***
