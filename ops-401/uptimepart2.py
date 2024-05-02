@@ -5,7 +5,7 @@
 # Date of latest revision:      05/01/2024
 # Purpose:                      Create an uptime sensor tool that uses ICMP packets to evaluate if hosts on the LAN are up or down.
 
-import os 
+import os
 import time
 import smtplib
 from datetime import datetime
@@ -13,58 +13,56 @@ from getpass import getpass
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-# Ask the user for an email address and password to use for sending notifications.
-email = input("Enter your email address: ")
-password = getpass("Enter your pasword: ")
+# Ask the user for their email address and password
+email = input("Please enter your email address: ")
+password = getpass("Please enter your password: ")
+
+# Set the recipient email address (administrator)
 recipient = input("Enter the recipient's email address: ")
 
-# Function to send an email notification
+# Function to send an email
 def send_email(subject, message):
-    try:
-        msg = MIMEMultipart()
-        msg['From'] = email
-        msg['To'] = recipient
-        msg['Subject'] = subject
-        msg.attach(MIMEText(message, 'plain'))
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(email, password)
-        text = msg.as_string()
-        server.sendmail(email, recipient, text)
-        server.quit()
-        print(f"Email sent to {recipient} has been successful!")
-    except Exception as e:
-        print(f"An error occurred while sending the email: {e}")
-
-# Test email sending before the loop
-send_email("Test Email", "This is a test email to check if sending works.")
+    msg = MIMEMultipart()
+    msg['From'] = email
+    msg['To'] = recipient
+    msg['Subject'] = subject
+    msg.attach(MIMEText(message, 'plain'))
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(email, password)
+    text = msg.as_string()
+    server.sendmail(email, recipient, text)
+    server.quit()
 
 # Transmit a single ICMP (ping) packet to a specific IP every two seconds.
-ip_address = input("Enter an IP address to transmit a single ICMP packet to: ")
+ip_address = input("Enter an ip address to transmit a single ICMP packet to: ")
 
-# Send an email to the administrator if a host status changes (from “up” to “down” or “down” to “up”).
+# Initialize the previous status
+prev_status = None
 pings = 0 
-prevstatus = None
 while True:
     # Get the current timestamp
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     
-    # Execute ping command to get the current status
+    # Ping the IP address
     result = os.system(f'ping -c 1 {ip_address} > /dev/null 2>&1')
     
+    # Evaluate the response as either success or failure.
     if result == 0:
         status = "Success"
-        print(f"{timestamp} Network {status} to {ip_address} Lan is up and running!") 
-        if prevstatus == "Failure":
-            send_email("Network Status Changed", f"Network status changed from {prevstatus} to {status} at {timestamp}")
-        prevstatus = status
+        print(f"{timestamp} Network {status} to {ip_address} Lan is up and running! ")
     else:
         status = "Failure"
         print(f"{timestamp} Network {status} to {ip_address} Lan is down!")
-        if prevstatus == "Success":
-            send_email("Network Status Changed", f"Network status changed from {prevstatus} to {status} at {timestamp}")
-        prevstatus = status
-    time.sleep(2)    
+    
+    # If the status has changed, send an email
+    if status != prev_status:
+        send_email(f"Network Status Change for {ip_address}", f"{ip_address} has changed to {status} at {timestamp}.")
+    
+    # Update the previous status
+    prev_status = status
+    
+    time.sleep(2)
     pings += 1
     if pings >= 4:
         break
