@@ -3,7 +3,7 @@
 # Script Name:                  ops401-challenge06
 # Author:                       Omar Ardid
 # Date of latest revision:      05/06/2024
-# Purpose:                      Creating a python script that encrypts a files
+# Purpose:                      Creating a Python script that encrypts/decrypts files and messages
 # Resources:                    https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
 
 import subprocess
