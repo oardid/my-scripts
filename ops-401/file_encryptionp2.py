@@ -1,10 +1,10 @@
 #!/bin/usr/python3
 
-# Script Name:                  ops401-challenge06
+# Script Name:                  ops401-challenge07
 # Author:                       Omar Ardid
-# Date of latest revision:      05/06/2024
-# Purpose:                      Creating a python script that encrypts a files
-# Resources:                    https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python
+# Date of latest revision:      05/07/2024
+# Purpose:                      Adding recursively feature to encrypt and decrypt folder and all its contents
+# Resources:                    https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python https://www.pythoncentral.io/recursive-file-and-directory-manipulation-in-python-part-1/
 
 import subprocess
 from cryptography.fernet import Fernet
