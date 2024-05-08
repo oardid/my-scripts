@@ -69,8 +69,8 @@ while True:
     print("3. Encrypt a message")
     print("4. Decrypt a message")
     print("5. Install Cryptography")
-    print("6. Recursivley encrypt a single folder and all its contents")
-    print("7. Recursively decrypt a single folder that was encrypted by this tool")
+    print("6. Encrypt a folder and all its contents")
+    print("7. Decrypt a folder and all its contents")
     print("8. Exit")
     choice = input("Before running this script make sure to have 'Cryptography' installed.\nEnter your choice: ").lower()
     if choice == '1': 
