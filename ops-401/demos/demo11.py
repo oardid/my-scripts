@@ -28,4 +28,4 @@ port_range = 22
 src_port = 22
 dst_port = 22
 
-response - srl(IP(dst=host)/TCP(sport=src_port, dport=dst_port, flags='s'), timeout=1, verbose=0)
+#response - srl(IP(dst=host)/TCP(sport=src_port, dport=dst_port, flags='s'), timeout=1, verbose=0)
