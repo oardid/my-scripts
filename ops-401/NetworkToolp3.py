@@ -98,5 +98,5 @@ def icmp_ping_and_scan(target_ip, ports):
 # Prompt the user for target IP address
 target_ip = input("Enter the target IP address or network (e.g., 192.168.1.1 or 192.168.1.0/24): ")
 
-# Example usage
+# Ports scans
 icmp_ping_and_scan(target_ip, [22, 80, 443, 3389])
