@@ -4,7 +4,7 @@
 # Author:                       Omar Ardid
 # Date of latest revision:      05/20/2024
 # Purpose:                      Creating a Brute Force Tool
-# Resources:                    
+# Resources:                    https://www.geeksforgeeks.org/iterate-over-a-set-in-python/
 
 import time
 import os
@@ -70,7 +70,7 @@ def menu():
             print("(づ ◕‿◕ )づ Goodbye!")
             break
         else:
-            print("\nε(*´･ω･)з Invalid number! ")
+            print("\nง •̀_•́)ง Invalid number! ")
 
 if __name__ == "__main__":
     menu()
