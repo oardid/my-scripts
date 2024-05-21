@@ -2,7 +2,7 @@
 
 # Script Name:                  ops401-challenge17
 # Author:                       Omar Ardid
-# Date of latest revision:      05/20/2024
+# Date of latest revision:      05/21/2024
 # Purpose:                      Adding Authenticate to an SSH server by its IP address
 # Resources:                    https://null-byte.wonderhowto.com/how-to/sploit-make-ssh-brute-forcer-python-0161689/
 
