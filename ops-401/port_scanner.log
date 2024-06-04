@@ -1,0 +1,9 @@
+2024-06-04 17:57:22,948 - INFO - Host 192.168.1.5 is down or unresponsive.
+2024-06-04 17:57:25,012 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-04 17:57:25,136 - INFO - Host 192.168.1.6 is down or unresponsive.
+2024-06-04 17:57:27,184 - WARNING - more Mac address to reach destination not found. Using broadcast.
+2024-06-04 17:57:27,308 - INFO - Host 192.168.1.7 is down or unresponsive.
+2024-06-04 17:57:29,372 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-04 17:57:29,500 - INFO - Host 192.168.1.8 is down or unresponsive.
+2024-06-04 17:57:31,576 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-04 17:57:31,704 - INFO - Host 192.168.1.9 is down or unresponsive.
