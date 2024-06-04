@@ -1,0 +1,8 @@
+2024-06-03 21:22:25,540 - WARNING - Host 192.168.1.22 is down or unresponsive.
+2024-06-03 21:22:25,540 - INFO - Starting SSH brute force attack.
+2024-06-03 21:22:28,818 - INFO - File downloaded successfully from https://raw.githubusercontent.com/oardid/ops-challenges/main/ops-401/rockyoutest.txt and saved as downloaded_password_file.txt
+2024-06-03 21:22:28,818 - ERROR - Invalid password file path. Aborting SSH brute force attack.
+2024-06-03 21:24:03,504 - WARNING - Host 192.168.1.22 is down or unresponsive.
+2024-06-03 21:24:03,504 - INFO - Starting SSH brute force attack.
+2024-06-03 21:24:05,439 - INFO - File downloaded successfully from https://raw.githubusercontent.com/Interslice-Inc/Interslice/main/Files/Scripts/password_list.txt and saved as downloaded_password_file.txt
+2024-06-03 21:24:05,439 - ERROR - Invalid password file path. Aborting SSH brute force attack.
