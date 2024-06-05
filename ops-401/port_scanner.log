@@ -1,9 +1,20 @@
-2024-06-04 17:57:22,948 - INFO - Host 192.168.1.5 is down or unresponsive.
-2024-06-04 17:57:25,012 - WARNING - Mac address to reach destination not found. Using broadcast.
-2024-06-04 17:57:25,136 - INFO - Host 192.168.1.6 is down or unresponsive.
-2024-06-04 17:57:27,184 - WARNING - more Mac address to reach destination not found. Using broadcast.
-2024-06-04 17:57:27,308 - INFO - Host 192.168.1.7 is down or unresponsive.
-2024-06-04 17:57:29,372 - WARNING - Mac address to reach destination not found. Using broadcast.
-2024-06-04 17:57:29,500 - INFO - Host 192.168.1.8 is down or unresponsive.
-2024-06-04 17:57:31,576 - WARNING - Mac address to reach destination not found. Using broadcast.
-2024-06-04 17:57:31,704 - INFO - Host 192.168.1.9 is down or unresponsive.
+2024-06-05 15:36:05,741 - INFO - Port 80 on 192.168.1.5 is closed
+2024-06-05 15:36:05,809 - INFO - Port 443 on 192.168.1.5 is closed
+2024-06-05 15:36:05,853 - INFO - Port 3389 on 192.168.1.5 is closed
+2024-06-05 15:39:36,397 - ERROR - Error scanning port 80 on 192.168.1.1: name 'TTCP' is not defined
+2024-06-05 15:39:36,437 - ERROR - Error scanning port 443 on 192.168.1.1: name 'TTCP' is not defined
+2024-06-05 15:39:38,629 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:39:40,817 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:39:42,997 - WARNING - more Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:39:43,309 - ERROR - Error scanning port 22 on 192.168.1.5: name 'TTCP' is not defined
+2024-06-05 15:39:43,361 - ERROR - Error scanning port 80 on 192.168.1.5: name 'TTCP' is not defined
+2024-06-05 15:39:43,405 - ERROR - Error scanning port 443 on 192.168.1.5: name 'TTCP' is not defined
+2024-06-05 15:39:43,445 - ERROR - Error scanning port 3389 on 192.168.1.5: name 'TTCP' is not defined
+2024-06-05 15:41:27,053 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:41:29,225 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:41:31,401 - WARNING - more Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:41:34,181 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:41:36,349 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:41:38,533 - WARNING - more Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:41:40,709 - WARNING - Mac address to reach destination not found. Using broadcast.
+2024-06-05 15:41:42,881 - WARNING - Mac address to reach destination not found. Using broadcast.
