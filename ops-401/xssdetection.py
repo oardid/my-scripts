@@ -83,6 +83,7 @@ def scan_xss(url):
 
 ### TODO: Add main explanation here ###
 ### In your own words, describe the purpose of this main as it relates to the overall objectives of the script ###
+# The main function scan_xss(url) iterates over all forms found on the given URL, submits each form with a malicious JavaScript code, and checks if the code is present in the response. If it is, it indicates an XSS vulnerability.
 if __name__ == "__main__":
     url = input("Enter a URL to test for XSS:") 
     print(scan_xss(url))
